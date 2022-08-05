@@ -1,0 +1,15 @@
+@import url('/src/index.css');
+
+.container__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.footer__copyright {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: .6rem;
+}
+
