@@ -1,0 +1,27 @@
+@import url('/src/index.css');
+
+.card {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    box-shadow: 5px 10px 15px 2px rgba(0,0,0,0.1);
+    background: var(--color-text);
+}
+
+.card__logo {
+    width: 50%;
+    height: 30%;
+    background: red;
+}
+
+.body__title {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+
+

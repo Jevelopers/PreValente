@@ -1,5 +1,5 @@
 import React from 'react'
-import stylesDashboard from './Dashboard.module.css'
+import stylesAdministration from 'Administration.module.css'
 import Card from '../Card/Card'
 
 //Importacion de multimedia
@@ -37,15 +37,15 @@ const datoCards = [
 
 ]
 
-function Dashboard() {
+function Inicio() {
     return (
-        <div className={stylesDashboard.container}>
-            <div className={stylesDashboard.container.header}>
-                <h3 className={stylesDashboard.container__subtitle}>Dashboard</h3>
-                <h1 className={stylesDashboard.container__title}>Buenos diás,John!</h1>
+        <div className={stylesAdministration.container}>
+            <div className={stylesAdministration.container.header}>
+                <h3 className={stylesAdministration.container__subtitle}>Dashboard</h3>
+                <h1 className={stylesAdministration.container__title}>Buenos diás,John!</h1>
             </div>
-            <div className={stylesDashboard.container__body}>
-                <div className={stylesDashboard.body__grid}>
+            <div className={stylesAdministration.container__body}>
+                <div className={stylesAdministration.body__grid}>
                     {
                         datoCards.map(datoCard =>(
                             <div key={datoCard.id}>
@@ -59,4 +59,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default Inicio
