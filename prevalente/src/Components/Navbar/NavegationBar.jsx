@@ -1,40 +1,47 @@
 import React from 'react'
-import stylesNavegationBar from './NavegationBar.module.css'
+import { useState } from 'react';
+import stylesNaveagtionBar from './NavegationBar.module.css'
+import { Link } from "react-router-dom";
 
+//Importación de multimedia - Icons
 import { FaBrain } from "react-icons/fa";
-import { VscSearch,VscChromeClose,VscGear, VscFolderLibrary, VscOutput, VscAccount,VscMenu } from 'react-icons/vsc';
-
+import { VscSearch, VscGear, VscFolderLibrary, VscOutput, VscAccount } from 'react-icons/vsc';
 
 function NavegationBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className={stylesNavegationBar.container}>
-      <div className={stylesNavegationBar.container__navbar}>
-        <div className={stylesNavegationBar.brand}>
-          <h1 className={stylesNavegationBar.brand__logotipo}><FaBrain /></h1>
-          <h1 className={stylesNavegationBar.brand__logotipotext}>Gente PreValente</h1>
-        </div>
-        <div className={stylesNavegationBar.search}>
-          <form className={stylesNavegationBar.search__frm}>
-            <button type='submit' className={stylesNavegationBar.search__button}><VscSearch /></button>
-            <input type="text" placeholder='Buscar..' className={stylesNavegationBar.search__input} />
-          </form>
-        </div>
-        <nav className={stylesNavegationBar.nav}>
-          <div className={stylesNavegationBar.btn_toggle__close}>
-           <VscChromeClose />
-          </div>
-          <ul className={stylesNavegationBar.menu}>
-            <li className={stylesNavegationBar.menu__item}><VscGear /> Administración</li>
-            <li className={stylesNavegationBar.menu__item}><VscFolderLibrary /> Mi empleo</li>
-            <li className={stylesNavegationBar.menu__item}><VscOutput /> Mi CV</li>
-            <li className={stylesNavegationBar.menu__item}><VscAccount /> Usuario</li>
-          </ul>
-        </nav>
-        <div className={stylesNavegationBar.btn_toggle__menu}>
-          <VscMenu />
-        </div>
+    <div className={stylesNaveagtionBar.navbar}>
+      <div className={stylesNaveagtionBar.navbar__brand}>
+        <h1 className={stylesNaveagtionBar.brand__logotipo}><FaBrain /></h1>
+        <Link to="Administration" className={stylesNaveagtionBar.brand__text}>Gente PreValente</Link>
+      </div>
+      <div className={stylesNaveagtionBar.search}>
+        <form className={stylesNaveagtionBar.search__frm}>
+          <button type='submit' className={stylesNaveagtionBar.search__button}><VscSearch /></button>
+          <input type="text" placeholder='Buscar..' className={stylesNaveagtionBar.search__input} />
+        </form>
+      </div>
+      <ul className={stylesNaveagtionBar.menu}>
+        <li className={stylesNaveagtionBar.menu__item} >
+          <Link to="/Administration" className={stylesNaveagtionBar.menu__link}><VscGear /> Administración</Link>
+        </li>
+        <li className={stylesNaveagtionBar.menu__item} >
+          <Link to="Empleo" className={stylesNaveagtionBar.menu__link}><VscFolderLibrary /> Mi empleo</Link>
+        </li>
+        <li className={stylesNaveagtionBar.menu__item} >
+          <Link to="Cv" className={stylesNaveagtionBar.menu__link}><VscOutput /> Mi CV</Link>
+        </li>
+        <li className={stylesNaveagtionBar.menu__item} >
+          <Link to="Usuario" className={stylesNaveagtionBar.menu__link}><VscAccount /> Usuario</Link>
+        </li>
+      </ul>
+      <div className={`${stylesNaveagtionBar.nav__toggle} ${isOpen && "open"}`}
+        onClick={() => setIsOpen(!isOpen)}>
+        <div className="bar"></div>
       </div>
     </div>
+
   )
 }
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import stylesAdministration from 'Administration.module.css'
-import Card from '../Card/Card'
+import stylesAdministration from './Administration.module.css'
+import Card from '../../Components/Card/Sm/Card'
 
 //Importacion de multimedia
-import iconFactory from '../Assets/factory.svg'
-import iconLine from '../Assets/line.svg'
-import iconuser from '../Assets/user.svg'
-import iconconfig from '../Assets/config.svg'
+import iconFactory from '../../Image/factory.svg'
+import iconLine from '../../Image/line.svg'
+import iconuser from '../../Image/user.svg'
+import iconconfig from '../../Image/config.svg'
 
 //Arreglo de Objetos CARD
 const datoCards = [
@@ -14,24 +14,28 @@ const datoCards = [
         id: 1,
         icon: iconFactory,
         title: "Solicitudes de creación de empresa",
+        url: "solicitud sin tratar",
         cantidadSolicit: 5
     },
     {
         id: 2,
         icon: iconLine,
         title: "Indicadores",
+        url: "Indicador sin tratar",
         cantidadSolicit: 2
     },
     {
         id: 3,
         icon: iconuser,
         title: "Inscripción de empleados en empresas",
+        url: "Inscripción sin tratar",
         cantidadSolicit: 3
     },
     {
         id: 4,
         icon: iconconfig,
         title: "Gestión de usuarios",
+        url: "Gestión sin tratar",
         cantidadSolicit: 1
     }
 
@@ -40,7 +44,7 @@ const datoCards = [
 function Inicio() {
     return (
         <div className={stylesAdministration.container}>
-            <div className={stylesAdministration.container.header}>
+            <div className={stylesAdministration.container__header}>
                 <h3 className={stylesAdministration.container__subtitle}>Dashboard</h3>
                 <h1 className={stylesAdministration.container__title}>Buenos diás,John!</h1>
             </div>
@@ -49,7 +53,7 @@ function Inicio() {
                     {
                         datoCards.map(datoCard =>(
                             <div key={datoCard.id}>
-                                <Card title={datoCard.title} iconSource={datoCard.icon} />
+                                <Card iconSource={datoCard.icon} title={datoCard.title} cantidadSolicit={datoCard.cantidadSolicit} url={datoCard.url} />
                             </div>
                         ))
                     }
