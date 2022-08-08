@@ -68,9 +68,9 @@ function Card() {
 
         <div className={stylesCardLg.container__footer}>
           <div className={stylesCardLg.pagination}>
-            <button><VscArrowLeft /></button>
-            <p className={stylesCardLg.text}>Empresa 1 de 2 pendiente de aprovación</p>
-            <button><VscArrowRight /></button>
+            <button className={stylesCardLg.pagination__button}><VscArrowLeft /></button>
+              <p className={stylesCardLg.text}>Empresa 1 de 2 pendiente de aprovación</p>
+            <button className={stylesCardLg.pagination__button}><VscArrowRight /></button>
           </div>
         </div>
       </div>

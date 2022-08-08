@@ -80,6 +80,21 @@
     justify-content: center;
 }
 
+.pagination__button {
+    padding: .5rem;
+    border: none;
+    font-size: 1.5rem;
+    clip-path: circle(50% at 50% 50%);
+    background: var(--color-accent);
+    margin: 1rem;
+
+}
+
+.pagination__button:hover {
+    transform: scale(1.1);
+}
+
+
 .text {
     font-family: var(--font-text);
     color: var(--color-accent);
