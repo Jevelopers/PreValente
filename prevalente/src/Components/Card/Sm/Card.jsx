@@ -11,7 +11,7 @@ function Card({icon, title, cantidadSolicit}) {
         <img className={stylesCard.header__icon} src= {icon} alt="Icon" srcset="" />
       </div>
       <div className={stylesCard.box__body}>
-        <Link to="" className={stylesCard.body__title}>{title}</Link>
+        <Link to="Solicitar" className={stylesCard.body__title}>{title}</Link>
       </div>
       <hr />
       <div className={stylesCard.box__footer}>
