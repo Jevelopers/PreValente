@@ -7,7 +7,7 @@
     gap: 1rem;
     padding: 2rem 5rem;
     border-radius: .5rem;
-    box-shadow: 5px 10px 15px 2px rgba(0,0,0,0.1);
+    box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.1);
 }
 
 .card__content {
@@ -30,7 +30,6 @@
     transform: scale(1.1);
 }
 
-
 .card__button {
     padding: .5rem 2rem;
     border-radius: 50rem;
@@ -38,16 +37,22 @@
     font-weight: 400;
     color: var(--color-primary);
     background: var(--color-text);
-    border: .1rem solid  rgba(0,0,0,0.2);
-    box-shadow: 0 .5rem 1rem 0  rgba(0,0,0,0.2);
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
 .card__info {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0;
     display: flex;
     column-gap: 5rem;
+}
+
+.info__colum {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .info__title,
@@ -64,11 +69,37 @@
     margin-left: .5rem;
 }
 
+.info__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.info__box__modal {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.info__box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .1rem;
+    background: var(--color-accent);
+}
+
 .card__content__button {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
+
 
 .container__footer {
     padding: 6rem 0;
@@ -99,3 +130,40 @@
     font-family: var(--font-text);
     color: var(--color-accent);
 }
+
+
+/*Diseño responsive Mobil */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .card {
+        padding: 2rem 3rem;
+        width: 100%;
+        flex-direction: column;
+    }
+    .card__content {
+        width: 100%;
+        order: 2;
+    }
+
+    .card__info {
+        background: red;
+        flex-direction: column;
+    }
+
+  
+
+
+   .card__content__button {
+    order: 3;
+   }
+ 
+   .container__footer {
+    order: 1;
+   }
+    
+
+
+}
+
+/*Diseño responsive Tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {}
