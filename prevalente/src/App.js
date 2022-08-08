@@ -15,6 +15,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<Administration />} />
             <Route path='Administration' element={<Administration />} />
             <Route path='Solicitud' element={<Solicitud />} />
             <Route path='Cv' element={<Error404 />} />

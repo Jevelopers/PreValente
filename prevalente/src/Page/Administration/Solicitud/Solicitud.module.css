@@ -4,37 +4,10 @@
     padding: 2rem 10rem;
 }
 
-.container__subtitle {
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    color: var(--color-secundary);
-    font-weight: 400;
-}
-
-.container__title {
-    font-family: var(--font-text);
-    font-size: 2rem;
-    color: var(--color-primary);
-}
-
 .container__body {
     margin: 2rem;
 }
 
-.body__slider {
-    display: grid;
-    height: 40rem;
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
-    border-radius: .5rem;
-    box-shadow: 5px 10px 15px 2px rgba(0,0,0,0.1);
-    background: var(--color-primary);
-}
-
-.container__footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /*Diseño responsive Mobil */
 @media screen and (min-width: 320px) and (max-width: 768px) {

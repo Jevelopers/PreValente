@@ -2,6 +2,7 @@ import React from 'react'
 import stylesAdministration from './Administration.module.css'
 import Card from '../../Components/Card/Sm/Card'
 
+
 //Importacion de multimedia
 import iconFactory from '../../Image/factory.svg'
 import iconLine from '../../Image/line.svg'
@@ -50,13 +51,10 @@ function Inicio() {
             </div>
             <div className={stylesAdministration.container__body}>
                 <div className={stylesAdministration.body__grid}>
-                    {
-                        datoCards.map(datoCard =>(
-                            <div key={datoCard.id}>
-                                <Card iconSource={datoCard.icon} title={datoCard.title} cantidadSolicit={datoCard.cantidadSolicit} url={datoCard.url} />
-                            </div>
-                        ))
-                    }
+                    <Card  icon={iconFactory} title={'Solicitudes de creación de empresa'} cantidadSolicit={5} />
+                    <Card  icon={iconLine} title={'Indicadores'} cantidadSolicit={2} />
+                    <Card  icon={iconuser} title={'Inscripción de empleados en empresas'} cantidadSolicit={4} />
+                    <Card  icon={iconconfig} title={'Gestión de usuarios'} cantidadSolicit={1} />
                 </div>
             </div>
         </div>
