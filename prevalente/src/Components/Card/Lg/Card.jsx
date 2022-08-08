@@ -11,6 +11,28 @@ function Card() {
   //Ctr del estado del modal
   const [modalDoc, setmodalDoc] = useState(false);
 
+  const datoInfo = [
+    {
+      id: 1,
+      title: "Nombre de la empresa",
+      info__description: "PREVALENTWARE"
+    },
+    {
+      id: 2,
+      title: "Nombre de la empresa",
+      info__description: "PREVALENTWARE"
+    },
+    {
+      id: 4,
+      title: "Nombre de la empresa",
+      info__description: "PREVALENTWARE"
+    },
+    {
+      id: 5,
+      title: "Nombre de la empresa",
+      info__description: "PREVALENTWARE"
+    },
+  ]
 
   return (
     <>
