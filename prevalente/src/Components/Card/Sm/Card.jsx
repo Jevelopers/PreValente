@@ -4,6 +4,7 @@ import { VscInfo } from 'react-icons/vsc';
 import { Link } from "react-router-dom";
 
 
+
 function Card({icon, title, cantidadSolicit}) {
   return (
     <div className={stylesCard.card}>

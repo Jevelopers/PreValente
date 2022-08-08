@@ -1,6 +1,5 @@
 import React from 'react'
 import stylesSolicitud from './Solicitud.module.css'
-
 import Card from '../../../Components/Card/Lg/Card';
 
 

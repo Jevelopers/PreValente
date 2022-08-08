@@ -32,7 +32,7 @@ function NavegationBar() {
           <Link to="Administration" className={stylesNaveagtionBar.menu__link}><VscGear /> Administración</Link>
         </li>
         <li className={stylesNaveagtionBar.menu__item} >
-          <Link to="Solicitud" className={stylesNaveagtionBar.menu__link}><VscFolderLibrary /> Mi empleo</Link>
+          <Link to="Empleo" className={stylesNaveagtionBar.menu__link}><VscFolderLibrary /> Mi empleo</Link>
         </li>
         <li className={stylesNaveagtionBar.menu__item} >
           <Link to="Cv" className={stylesNaveagtionBar.menu__link}><VscOutput /> Mi CV</Link>
