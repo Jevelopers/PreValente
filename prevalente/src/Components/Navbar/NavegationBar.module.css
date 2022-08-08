@@ -114,26 +114,42 @@
     color: var(--color-third);
 }
 
-.nav__toggle {
+.toogle {
     display: none;
 }
 
 
 /*Diseño responsive Mobil */
 @media screen and (min-width: 320px) and (max-width: 768px) {
+    /*Caja principal*/
+    .navbar {
+        padding: .8rem 2rem;
+    }
+
     /*Caja de barra de busqueda*/
     .search {
         display: none;
     }
+
     /*Caja de barra de navegacion*/
     .menu {
-        position: absolute;
         flex-direction: column;
-        background: var(--color-primary);
         width: 100%;
-        height: 100%;
+        position: absolute;
+        opacity: 0;
     }
-    .nav__toggler {
+
+    .toogle {
         display: flex;
+        color: var(--color-text);
+        font-size: 2rem;
     }
+
+    .active {
+        background: var(--color-primary);
+        opacity: 1;
+        transition: all .2s ease-out;
+        z-index: 1;
+    }
+    
 }

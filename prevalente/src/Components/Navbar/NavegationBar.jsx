@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 
 //Importación de multimedia - Icons
 import { FaBrain } from "react-icons/fa";
-import { VscSearch, VscGear, VscFolderLibrary, VscOutput, VscAccount } from 'react-icons/vsc';
+import { VscSearch, VscGear, VscFolderLibrary, VscOutput, VscAccount,VscMenu,VscChromeClose } from 'react-icons/vsc';
 
 function NavegationBar() {
-  const [isOpen, setIsOpen] = useState(false);
+
+  const [click, setClick] = useState(false);
+  const handleClick = () =>setClick(!click);
+
 
   return (
     <div className={stylesNaveagtionBar.navbar}>
@@ -16,18 +19,20 @@ function NavegationBar() {
         <h1 className={stylesNaveagtionBar.brand__logotipo}><FaBrain /></h1>
         <Link to="Administration" className={stylesNaveagtionBar.brand__text}>Gente PreValente</Link>
       </div>
+
       <div className={stylesNaveagtionBar.search}>
         <form className={stylesNaveagtionBar.search__frm}>
           <button type='submit' className={stylesNaveagtionBar.search__button}><VscSearch /></button>
           <input type="text" placeholder='Buscar..' className={stylesNaveagtionBar.search__input} />
         </form>
       </div>
+
       <ul className={stylesNaveagtionBar.menu}>
         <li className={stylesNaveagtionBar.menu__item} >
-          <Link to="/Administration" className={stylesNaveagtionBar.menu__link}><VscGear /> Administración</Link>
+          <Link to="Administration" className={stylesNaveagtionBar.menu__link}><VscGear /> Administración</Link>
         </li>
         <li className={stylesNaveagtionBar.menu__item} >
-          <Link to="Empleo" className={stylesNaveagtionBar.menu__link}><VscFolderLibrary /> Mi empleo</Link>
+          <Link to="Solicitud" className={stylesNaveagtionBar.menu__link}><VscFolderLibrary /> Mi empleo</Link>
         </li>
         <li className={stylesNaveagtionBar.menu__item} >
           <Link to="Cv" className={stylesNaveagtionBar.menu__link}><VscOutput /> Mi CV</Link>
@@ -36,9 +41,8 @@ function NavegationBar() {
           <Link to="Usuario" className={stylesNaveagtionBar.menu__link}><VscAccount /> Usuario</Link>
         </li>
       </ul>
-      <div className={`${stylesNaveagtionBar.nav__toggle} ${isOpen && "open"}`}
-        onClick={() => setIsOpen(!isOpen)}>
-        <div className="bar"></div>
+      <div className={stylesNaveagtionBar.toogle} onClick={handleClick}>
+        {click ? <VscChromeClose /> : <VscMenu />}
       </div>
     </div>
 

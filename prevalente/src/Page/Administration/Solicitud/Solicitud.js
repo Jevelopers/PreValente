@@ -1,6 +1,8 @@
 import React from 'react'
 import stylesSolicitud from './Solicitud.module.css'
 
+import Modal from '../../../Components/Modal/Modal'
+
 
 function Solicitud() {
   return (
@@ -9,10 +11,10 @@ function Solicitud() {
       </div>
       <div className={stylesSolicitud.container__body}>
         <div className={stylesSolicitud.body__slider}>
+          <Modal />
         </div>
         <div className={stylesSolicitud.container__footer}>
           <div className={stylesSolicitud.pagination}>
-            AQUI VA LA PAGINACION
           </div>
         </div>
       </div>
