@@ -66,6 +66,7 @@
 .info__description {
     color: var(--color-primary);
     font-weight: bold;
+    text-transform: uppercase;
     margin-left: .5rem;
 }
 
@@ -136,7 +137,7 @@
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
     .card {
-        padding: 2rem 3rem;
+        padding: 5rem;
         width: 100%;
         flex-direction: column;
     }
@@ -146,7 +147,6 @@
     }
 
     .card__info {
-        background: red;
         flex-direction: column;
     }
 
