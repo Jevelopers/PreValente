@@ -1,6 +1,5 @@
 @import url('/src/index.css');
 
-
 .card {
     display: flex;
     background: var(--color-text);
@@ -102,12 +101,9 @@
 }
 
 
-.container__footer {
-    padding: 6rem 0;
-}
-
 .pagination {
     display: flex;
+    padding-top: 5rem;
     align-items: center;
     justify-content: center;
 }
@@ -126,8 +122,7 @@
     transform: scale(1.1);
 }
 
-
-.text {
+.pagination__text {
     font-family: var(--font-text);
     color: var(--color-accent);
 }
@@ -150,8 +145,27 @@
         flex-direction: column;
     }
 
-  
+   .card__content__button {
+    order: 3;
+   }
 
+}
+
+/*Diseño responsive Tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        padding: 5rem;
+        width: 100%;
+        flex-direction: column;
+    }
+    .card__content {
+        width: 100%;
+        order: 2;
+    }
+
+    .card__info {
+        flex-direction: column;
+    }
 
    .card__content__button {
     order: 3;
@@ -160,10 +174,4 @@
    .container__footer {
     order: 1;
    }
-    
-
-
 }
-
-/*Diseño responsive Tablet */
-@media screen and (min-width: 769px) and (max-width: 1024px) {}

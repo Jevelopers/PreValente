@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useState } from 'react'
 import stylesCardLg from './Card.module.css'
 import stylesModal from '../../Modal/Modal.module.css'
@@ -30,7 +30,7 @@ function Card() {
   ]
 
   return (
-    <>
+    <Fragment>
       <div className={stylesCardLg.card__wrapper}>
         <div className={stylesCardLg.card}>
           <div className={stylesCardLg.card__content}>
@@ -67,6 +67,7 @@ function Card() {
                 <div className={stylesCardLg.info__box__modal}>
                   {/** Implementacion de modal en un boton */}
                   <button className={stylesCardLg.card__button} onClick={() => setmodalDoc(!modalDoc)}><VscLink /> Ver archivos adjuntos</button>
+                  
                   <ModalDoc stateModalDoc={modalDoc} changeModalDoc={setmodalDoc} >
                     <div className={stylesModal.head__content}>
                       <div className={stylesModal.content_box}>
@@ -91,22 +92,22 @@ function Card() {
               </div>
             </div>
           </div>
-
+          {/**Botones de accion */}
           <div className={stylesCardLg.card__content__button} >
             <button className={stylesCardLg.card__button}><VscChromeClose /> Rechazar</button>
             <button className={stylesCardLg.card__button}><VscCheck /> Aprobar</button>
           </div>
         </div>
-
-        <div className={stylesCardLg.container__footer}>
-          <div className={stylesCardLg.pagination}>
-            <button className={stylesCardLg.pagination__button}><VscArrowLeft /></button>
-            <p className={stylesCardLg.text}>Empresa 1 de 2 pendiente de aprovación</p>
-            <button className={stylesCardLg.pagination__button}><VscArrowRight /></button>
-          </div>
+      </div>
+      {/**Pie de pagina -->Paginacion */}
+      <div className={stylesCardLg.container__footer}>
+        <div className={stylesCardLg.pagination}>
+          <button className={stylesCardLg.pagination__button}><VscArrowLeft /></button>
+          <p className={stylesCardLg.pagination__text}>Empresa 1 de 2 pendiente de aprovación</p>
+          <button className={stylesCardLg.pagination__button}><VscArrowRight /></button>
         </div>
       </div>
-    </>
+    </Fragment>
 
   )
 }
