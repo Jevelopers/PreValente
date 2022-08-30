@@ -6,6 +6,7 @@ import Footer from './Components/Footer/Footer';
 //Importacion de Paginas
 import Administration from './Page/Administration/Administration'
 import Error404 from './Page/404/Err404'
+import Solicitud from './Page/Administration/Solicitud/Solicitud';
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Administration />} />
-            <Route path='Administration/*' element={<Administration />} />
-            <Route path='Empleo' element={<Error404 />} />
+            <Route path='Administration' element={<Administration />} />
+            <Route path='Empleo' element={<Solicitud />} />
             <Route path='Cv' element={<Error404 />} />
             <Route path='Usuario' element={<Error404 />} />
         </Route>
