@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 
 
 
-function Card({icon, title, cantidadSolicit}) {
+function Card({icon, title, linkRoute, cantidadSolicit}) {
   return (
     <div className={stylesCard.card}>
       <div className={stylesCard.box__header}>
-        <img className={stylesCard.header__icon} src= {icon} alt="Icon" srcset="" />
+        <img className={stylesCard.header__icon} src={icon} alt="Icon" srcset="" />
       </div>
       <div className={stylesCard.box__body}>
-        <Link to="Solicitar" className={stylesCard.body__title}>{title}</Link>
+        <Link to={linkRoute} className={stylesCard.body__title}>{title}</Link>
       </div>
       <hr />
       <div className={stylesCard.box__footer}>
